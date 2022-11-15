@@ -1,5 +1,5 @@
 {
-    "name": "cakephp/app",
+    "name": "totalstudio/app",
     "description": "CakePHP skeleton app",
     "homepage": "https://cakephp.org",
     "type": "project",
@@ -36,6 +36,7 @@
         "stan": "phpstan analyse",
         "test": "phpunit --colors=always"
     },
+    "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
         "sort-packages": true,
