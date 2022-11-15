@@ -5,8 +5,7 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "total-studio/cms": "dev-main",
-        "total-studio/t-s-excel": "dev-master"
+        "total-studio/cms": "dev-main"
     },
     "require-dev": {
         "cakephp/bake": "^2.6",
