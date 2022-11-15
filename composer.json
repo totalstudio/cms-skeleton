@@ -5,8 +5,7 @@
     "type": "project",
     "license": "MIT",
     "require": {
-        "total-studio/cms": "dev-main",
-        "total-studio/t-s-excel": "dev-main"
+        "total-studio/cms": "dev-main"
     },
     "suggest": {
         "markstory/asset_compress": "An asset compression plugin which provides file concatenation and a flexible filter system for preprocessing and minification.",
@@ -50,10 +49,6 @@
         {
             "type": "vcs",
             "url": "https://github.com/totalstudio/cms"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/totalstudio/tsexcel"
         }
     ]
 }
