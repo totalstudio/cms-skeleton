@@ -62,7 +62,9 @@ class Application extends BaseApplication
         if (Configure::read('debug')) {
             $this->addPlugin('DebugKit');
         }
-
+        
+        // Load Studio CMS
+        $this->addPlugin($this->addPlugin(\TSCms\Plugin::class));
         // Load more plugins here
     }
 
