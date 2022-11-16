@@ -64,7 +64,7 @@ class Application extends BaseApplication
         }
         
         // Load Studio CMS
-        $this->addPlugin($this->addPlugin(\TSCms\Plugin::class));
+        $this->addPlugin(\TSCms\Plugin::class);
         // Load more plugins here
     }
 
