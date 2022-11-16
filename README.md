@@ -11,8 +11,7 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 ## Installation
 
 1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `composer create-project totalstudio/app [app-name] --repository "{\"type\":\"vcs\",\"url\":\"https://github.com/totalst
-udio/cms-skeleton\"}" --stability=dev --ignore-platform-reqs`.
+2. Run `composer create-project totalstudio/app [app-name] --repository "{\"type\":\"vcs\",\"url\":\"https://github.com/totalstudio/cms-skeleton\"}" --stability=dev --ignore-platform-reqs`.
 
 If Composer is installed globally, run
 
