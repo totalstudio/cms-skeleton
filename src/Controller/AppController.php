@@ -26,7 +26,7 @@ use Cake\Controller\Controller;
  *
  * @link https://book.cakephp.org/4/en/controllers.html#the-app-controller
  */
-class AppController extends Controller
+class AppController extends \TSCms\Controller\AppController
 {
     /**
      * Initialization hook method.
