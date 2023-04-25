@@ -57,6 +57,13 @@
     },
     "repositories": [
         {
+            "type": "path",
+            "url": "../dev/*",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
             "type": "vcs",
             "url": "https://github.com/totalstudio/cms"
         },
