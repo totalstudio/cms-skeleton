@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../dev/cms"
+		},
+		{
+			"path": "../../dev/ts-plugin-install"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "app"
+	}
+}

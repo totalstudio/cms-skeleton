@@ -21,12 +21,9 @@ use Cake\Core\ContainerInterface;
 use Cake\Datasource\FactoryLocator;
 use Cake\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Http\BaseApplication;
-use Cake\Http\Middleware\BodyParserMiddleware;
-use Cake\Http\Middleware\CsrfProtectionMiddleware;
 use Cake\Http\MiddlewareQueue;
 use Cake\ORM\Locator\TableLocator;
 use Cake\Routing\Middleware\AssetMiddleware;
-use Cake\Routing\Middleware\RoutingMiddleware;
 
 /**
  * Application setup class.
@@ -66,6 +63,7 @@ class Application extends BaseApplication
         // Load Studio CMS
         $this->addPlugin(\TSCms\Plugin::class);
         // Load more plugins here
+        $this->addPlugin(\TSInstall\Plugin::class);
     }
 
     /**

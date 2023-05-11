@@ -70,6 +70,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/totalstudio/tsexcel"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/totalstudio/ts-plugin-install"
         }
     ]
 }
