@@ -48,7 +48,7 @@ return [
             'username' => env('DATABASE_USERNAME', 'root'),
             'password' => env('DATABASE_PASSWORD', ''),
             'database' => env('DATABASE_DATABASE', false),
-            'encoding' => env('DATABASE_ENCODING', 'utf8'),
+            'encoding' => env('DATABASE_ENCODING', 'utf8mb4'),
             'timezone' => 'UTC',
             'flags' => [],
             'cacheMetadata' => true,

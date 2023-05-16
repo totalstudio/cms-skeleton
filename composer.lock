@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fb9d422230cdd993164a6a35eea980f4",
+    "content-hash": "f0e715a97a3e4b7669d3c64962dea478",
     "packages": [
         {
             "name": "admad/cakephp-i18n",
@@ -3946,7 +3946,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dev/cms",
-                "reference": "8a23699b26826bf7646acf2272766bb8031513e4"
+                "reference": "151f3da6f05a20f483cc4242be61f5056f9e59c8"
             },
             "require": {
                 "admad/cakephp-i18n": "^2.2",
@@ -3995,42 +3995,6 @@
                 "cakephp",
                 "cms"
             ],
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
-        },
-        {
-            "name": "total-studio/install",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../dev/ts-plugin-install",
-                "reference": "841e0cccd0f5cd5022a9baf0c764fc274876f933"
-            },
-            "require": {
-                "cakephp/cakephp": "*",
-                "php": ">=7.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^8.5 || ^9.3"
-            },
-            "type": "cakephp-plugin",
-            "autoload": {
-                "psr-4": {
-                    "TSInstall\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "TSInstall\\Test\\": "tests/",
-                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "description": "TSInstall plugin for CakePHP",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -7764,12 +7728,11 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "total-studio/cms": 20,
-        "total-studio/install": 20
+        "total-studio/cms": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
