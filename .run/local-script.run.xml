@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="local-script" type="PhpLocalRunConfigurationType" factoryName="PHP Console" singleton="false" path="$PROJECT_DIR$/bin/cake.php" scriptParameters="server">
+    <method v="2" />
+  </configuration>
+</component>

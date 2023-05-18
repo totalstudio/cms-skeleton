@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0e715a97a3e4b7669d3c64962dea478",
+    "content-hash": "5d5b27250e299959ee486004a8e3f281",
     "packages": [
         {
             "name": "admad/cakephp-i18n",
@@ -1549,16 +1549,16 @@
         },
         {
             "name": "mirko-pagliai/php-tools",
-            "version": "1.7.3",
+            "version": "1.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/mirko-pagliai/php-tools.git",
-                "reference": "3bcbaa4d4f7812d3342d99a2648d437ab3c136f6"
+                "reference": "e78181011ab67887286eb9ac8db8c05d0445bda0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mirko-pagliai/php-tools/zipball/3bcbaa4d4f7812d3342d99a2648d437ab3c136f6",
-                "reference": "3bcbaa4d4f7812d3342d99a2648d437ab3c136f6",
+                "url": "https://api.github.com/repos/mirko-pagliai/php-tools/zipball/e78181011ab67887286eb9ac8db8c05d0445bda0",
+                "reference": "e78181011ab67887286eb9ac8db8c05d0445bda0",
                 "shasum": ""
             },
             "require": {
@@ -1570,6 +1570,7 @@
                 "symfony/filesystem": "^5.0|^6.0",
                 "symfony/finder": "^5.0|^6.0",
                 "symfony/polyfill-php80": "^1.25",
+                "symfony/polyfill-php83": "^1.27",
                 "symfony/process": "^5.0|^6.0",
                 "symfony/string": "^5.0|^6.0",
                 "symfony/translation-contracts": "^2.1",
@@ -1611,9 +1612,9 @@
             "homepage": "https://github.com/mirko-pagliai/php-tools",
             "support": {
                 "issues": "https://github.com/mirko-pagliai/php-tools/issues",
-                "source": "https://github.com/mirko-pagliai/php-tools/tree/1.7.3"
+                "source": "https://github.com/mirko-pagliai/php-tools/tree/1.7.4"
             },
-            "time": "2023-04-20T16:42:25+00:00"
+            "time": "2023-05-17T13:35:33+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
@@ -3543,6 +3544,83 @@
             "time": "2022-11-03T14:55:06+00:00"
         },
         {
+            "name": "symfony/polyfill-php83",
+            "version": "v1.27.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-php83.git",
+                "reference": "508c652ba3ccf69f8c97f251534f229791b52a57"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/508c652ba3ccf69f8c97f251534f229791b52a57",
+                "reference": "508c652ba3ccf69f8c97f251534f229791b52a57",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1",
+                "symfony/polyfill-php80": "^1.14"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "1.27-dev"
+                },
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Php83\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Nicolas Grekas",
+                    "email": "p@tchwork.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill backporting some PHP 8.3+ features to lower PHP versions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "polyfill",
+                "portable",
+                "shim"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.27.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-11-03T14:55:06+00:00"
+        },
+        {
             "name": "symfony/process",
             "version": "v6.2.10",
             "source": {
@@ -3946,7 +4024,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dev/cms",
-                "reference": "151f3da6f05a20f483cc4242be61f5056f9e59c8"
+                "reference": "788b856eb757b591031fe50a3f504d27ac76cb5c"
             },
             "require": {
                 "admad/cakephp-i18n": "^2.2",
@@ -3995,6 +4073,42 @@
                 "cakephp",
                 "cms"
             ],
+            "transport-options": {
+                "symlink": true,
+                "relative": true
+            }
+        },
+        {
+            "name": "total-studio/install",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../dev/ts-plugin-install",
+                "reference": "a1f2660daf27916958bdc39dfe48f63f3d2adf1e"
+            },
+            "require": {
+                "cakephp/cakephp": "*",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.5 || ^9.3"
+            },
+            "type": "cakephp-plugin",
+            "autoload": {
+                "psr-4": {
+                    "TSInstall\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "TSInstall\\Test\\": "tests/",
+                    "Cake\\Test\\": "vendor/cakephp/cakephp/tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "TSInstall plugin for CakePHP",
             "transport-options": {
                 "symlink": true,
                 "relative": true
@@ -7257,16 +7371,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.11.1",
+            "version": "8.12.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "af87461316b257e46e15bb041dca6fca3796d822"
+                "reference": "f69e2524e8770efb9b3e5ac4a0ebc0d54eb446d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/af87461316b257e46e15bb041dca6fca3796d822",
-                "reference": "af87461316b257e46e15bb041dca6fca3796d822",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/f69e2524e8770efb9b3e5ac4a0ebc0d54eb446d7",
+                "reference": "f69e2524e8770efb9b3e5ac4a0ebc0d54eb446d7",
                 "shasum": ""
             },
             "require": {
@@ -7278,11 +7392,11 @@
             "require-dev": {
                 "phing/phing": "2.17.4",
                 "php-parallel-lint/php-parallel-lint": "1.3.2",
-                "phpstan/phpstan": "1.10.14",
+                "phpstan/phpstan": "1.10.15",
                 "phpstan/phpstan-deprecation-rules": "1.1.3",
                 "phpstan/phpstan-phpunit": "1.3.11",
                 "phpstan/phpstan-strict-rules": "1.5.1",
-                "phpunit/phpunit": "7.5.20|8.5.21|9.6.6|10.1.1"
+                "phpunit/phpunit": "7.5.20|8.5.21|9.6.8|10.1.3"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -7306,7 +7420,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.11.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.12.1"
             },
             "funding": [
                 {
@@ -7318,7 +7432,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-04-24T08:19:01+00:00"
+            "time": "2023-05-15T21:42:25+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -7728,7 +7842,8 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "total-studio/cms": 20
+        "total-studio/cms": 20,
+        "total-studio/install": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
