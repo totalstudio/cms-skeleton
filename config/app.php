@@ -416,14 +416,5 @@ return [
      */
     'Session' => [
         'defaults' => 'php',
-    ],
-    'DebugKit' => [
-        'forceEnable' => true,
-        'ignoreAuthorization' => true,
-        'panels' => [
-            'DebugKit.Environment' => false,
-            'StudioKit',
-            //'Webshop.Webshop'
-        ]
     ]
 ];
