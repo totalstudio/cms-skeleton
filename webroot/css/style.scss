@@ -1,0 +1,158 @@
+@import 'mixins';
+
+@function v($var) {
+  @return var(--#{$var});
+}
+
+//Colors
+$black: #000000;
+$white: #FFFFFF;
+$red: #fa5c5c;
+$highlight: #007cf6;
+$grid-gutter-width: 15px;
+
+:root {
+  --mainBlack: #{$black};
+  --mainWhite: #{$white};
+  --mainRed: #{$red};
+  --mainHighlight: #{$highlight};
+  --bs-gutter-x: #{$grid-gutter-width};
+}
+
+//fonts
+$fontPrimary: 'Poppins', sans-serif;;
+$fontSecondary: 'Comfortaa', cursive;;
+
+html {
+  scroll-behavior: smooth;
+}
+body{
+  font-family: $fontPrimary;
+  color: $black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main{
+    flex: 1;
+  }
+
+  h1, h2, h3{
+    font-family: $fontSecondary;
+  }
+  a{
+    @include transition(all .2s ease-in-out);
+    text-decoration: none;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  img{
+    height: auto;
+  }
+  .row{
+    --bs-gutter-x: 30px!important;
+  }
+}
+.error-message{
+  color: $red;
+}
+//header
+header{
+  position: sticky;
+  z-index: 50;
+  background: $highlight;
+  padding: 15px 0;
+  top: 0;
+  .navbar {
+    background: $highlight;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    ul{
+      &>li{
+        padding: 0 15px;
+        a{
+          color: $white;
+          &:hover{
+            color: $black;
+          }
+        }
+      }
+    }
+    @include lg{
+      background:initial;
+      position: static;
+      width: auto;
+      text-align: right;
+    }
+  }
+}
+
+
+//footer
+footer{
+  .top{
+    background: $highlight;
+    color: $white;
+    a{
+      color: $white;
+      &:hover{
+        color: $highlight;
+      }
+    }
+  }
+}
+
+
+#toTop {
+  background: $highlight;
+  border: none;
+  bottom: 30px;
+  color: $white;
+  font-size: 28px;
+  height: 50px;
+  line-height: 50px;
+  padding: 0;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  width: 50px;
+  z-index: 100;
+  @include md {
+    bottom: 60px;
+    right: 40px;
+  }
+  @include lg {
+    bottom: 60px;
+    right: 40px;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.error{
+  margin-top:200px;
+  margin-bottom:200px;
+  .clip{
+    display: inline-block;
+    margin: 20px;
+    font-size: 50px;
+    .shadow{
+      width:90px;
+      height:90px;
+      background-color: $highlight;
+      border-radius: 50%;
+      color: $white;
+      line-height: 90px;
+
+    }
+  }
+}
+
+@import 'pages';

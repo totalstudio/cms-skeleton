@@ -1,0 +1,184 @@
+//Media Queries
+@mixin xs {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: 576px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: 1400px) {
+    @content;
+  }
+}
+@mixin xxxl {
+  @media (min-width: 1600px) {
+    @content;
+  }
+}
+
+//Font Awesome 5 Pro
+@mixin fa($char) {
+  content: $char !important;
+  display: inline-block;
+  font-family: Font Awesome\ 5 Pro, sans-serif;
+  font-weight: 900;
+}
+//Font Awesome 5 Pro Brands
+@mixin fab($char) {
+  content: $char !important;
+  display: inline-block;
+  font-family: Font Awesome\ 5 Brands, sans-serif;
+}
+//Horizontal Gradient
+@mixin horizontalGradient($angle, $left, $right) {
+  background: $left; /* Old browsers */
+  background: -moz-linear-gradient($angle, $left 0%, $right 100%); /* FF3.6+ */
+  background: -webkit-linear-gradient($angle, $left 0%, $right 100%); /* Chrome10+,Safari5.1+ */
+  background: linear-gradient($angle, $left 0%, $right 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000', GradientType=0); /* IE6-9 */
+}
+//Transition
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+//Transform
+@mixin transform($transforms) {
+  -moz-transform: $transforms;
+  -o-transform: $transforms;
+  -ms-transform: $transforms;
+  -webkit-transform: $transforms;
+  transform: $transforms;
+}
+//Text Gradient
+@mixin textGradient($colorFrom, $colorTo: $colorFrom) {
+  //fallback
+  color: $colorFrom;
+  //gradiens working everywhere, but IE and operaMini
+  background: -webkit-gradient(linear, left top, right bottom, from($colorFrom), to($colorTo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+//Image Position
+@mixin image-position($imageWidth) {
+  &.left-image, &.right-image {
+    .box {
+      .main-image-link {
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: $imageWidth;
+        order: 2;
+        margin-top: 8px;
+      }
+    }
+  }
+
+  &.right-image {
+    .box {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      .inner {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        order: 1;
+        @include lg {
+          padding-right: 40px;
+        }
+      }
+    }
+  }
+
+  &.left-image {
+    .box {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+      .main-image-link {
+        order: 1;
+      }
+
+      .inner {
+        -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+        max-width: 100%;
+        order: 1;
+        @include lg {
+          padding-left: 40px;
+        }
+      }
+    }
+  }
+
+}
+//Rotate
+@mixin rotate($deg) {
+  @include transform(rotate(#{$deg}deg));
+}
+//Scale
+@mixin scale($scale) {
+  @include transform(scale($scale));
+}
+//Translate
+@mixin translate($x, $y) {
+  @include transform(translate($x, $y));
+}
+//Skew
+@mixin skew($x, $y) {
+  @include transform(skew(#{$x}deg, #{$y}deg));
+}
+//Transform Origin
+@mixin transform-origin($origin) {
+  -o-transform-origin: $origin;
+  -ms-transform-origin: $origin;
+  -webkit-transform-origin: $origin;
+  transform-origin: $origin;
+}
+//Cover Background
+@mixin cover($color, $opacity) {
+  content: '';
+  display: block;
+  position: absolute;
+  left:0;
+  top:0;
+  background-color: $color;
+  opacity: $opacity;
+  z-index:1;
+  width:100%;
+  height:100%;
+}
