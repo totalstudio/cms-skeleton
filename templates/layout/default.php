@@ -32,7 +32,7 @@
         }else{
             $this->start('social');
 
-            echo $this->SocialShare->metaTags(
+            echo $this->TsSocialShare->metaTags(
                 [],
                 'website',
                 $this->TsHtml->pageTitle($this->fetch('title'), '-', true),
@@ -87,13 +87,13 @@
         echo $this->element('adminbar');
     }
 
-    echo $this->element('header');
+    echo $this->element('header',[], ['plugin' => false]);
 
     echo $this->Flash->render();
     echo $this->Html->tag('main', $this->fetch('content'), ['class' => (!empty($mainClass) ? $mainClass : '')]);
     echo $this->TsHtml->initPopup(['class' => 'modal-lg']);
     echo '<button id="toTop" class="d-none" title="Az oldal tetejére"><i class="fas fa-angle-up"></i></button>';
-    echo $this->element('footer');
+    echo $this->element('footer',[], ['plugin' => false]);
 
     echo $this->TsHtml->getFontawesome('5_13_0', ['solid-900', 'brands-400'], ['solid', 'brands']);
 

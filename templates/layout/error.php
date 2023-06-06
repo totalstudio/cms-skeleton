@@ -32,7 +32,7 @@
     }else{
         $this->start('social');
 
-        echo $this->SocialShare->metaTags(
+        echo $this->TsSocialShare->metaTags(
             [],
             'website',
             $this->TsHtml->pageTitle($this->fetch('title'), '-', true),
