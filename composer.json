@@ -9,7 +9,7 @@
         "dereuromark/cakephp-cache": "^1.1",
         "mirko-pagliai/cakephp-assets": "^1.5",
         "total-studio/cms": "dev-main",
-		"cakephp/plugin-installer": "*",
+		"cakephp/plugin-installer": "*"
     },
     "require-dev": {
         "total-studio/install": "dev-main",
