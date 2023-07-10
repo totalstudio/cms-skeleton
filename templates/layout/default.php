@@ -119,6 +119,7 @@
     echo
     $this->Asset->script([
         'TSCms.studio.js',
+        'TSCms.scrips.js',
     ]);
 
     echo $this->fetch('script');
