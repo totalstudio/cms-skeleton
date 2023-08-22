@@ -18,6 +18,7 @@ namespace App\View;
 use Cake\View\View;
 use TSCms\View\Helper\TsAdminHelper;
 use TSCms\View\Helper\TsFormHelper;
+use TSCms\View\Helper\TsHtmlHelper;
 use TSForms\View\Helper\FormCreatorHelper;
 
 /**
@@ -28,6 +29,7 @@ use TSForms\View\Helper\FormCreatorHelper;
  * @property TsFormHelper $TsForm
  * @property TsAdminHelper $TsAdmin
  * @property FormCreatorHelper $FormCreator
+ * @property TsHtmlHelper $TsHtml
  * @link https://book.cakephp.org/4/en/views.html#the-app-view
  */
 class AppView extends View
