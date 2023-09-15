@@ -64,6 +64,26 @@
         },
         {
             "type": "vcs",
+            "url": "https://github.com/totalstudio/ts-remote-cakephp-assets"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/totalstudio/ts-remote-cakephp-social-auth"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/totalstudio/ts-remote-acl"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/totalstudio/ts-remote-cakephp-i18n"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/totalstudio/ts-remote-cakephp-cache"
+        },
+        {
+            "type": "vcs",
             "url": "https://github.com/totalstudio/cms"
         },
         {

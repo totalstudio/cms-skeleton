@@ -4,15 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "efbf9c92284a53b0bae8297f3f72d708",
+    "content-hash": "3f4095b279b77ded484325c80889a937",
     "packages": [
         {
             "name": "admad/cakephp-i18n",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/totalstudio/ts-remote-cakephp-i18n.git",
+                "reference": "01ed445705d94146cbed0a3f2fc781d71301e508"
+            },
             "dist": {
-                "type": "path",
-                "url": "../dev/cakephp-i18n",
-                "reference": "4208305e454cda236972e346c1fbd45727bb5f4e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/totalstudio/ts-remote-cakephp-i18n/zipball/01ed445705d94146cbed0a3f2fc781d71301e508",
+                "reference": "01ed445705d94146cbed0a3f2fc781d71301e508",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^5.0"
@@ -20,6 +26,7 @@
             "require-dev": {
                 "phpunit/phpunit": "~8.5.0"
             },
+            "default-branch": true,
             "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
@@ -57,18 +64,27 @@
                 "source": "https://github.com/ADmad/cakephp-i18n",
                 "issues": "https://github.com/ADmad/cakephp-i18n/issues"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/ADmad"
+                }
+            ],
+            "time": "2023-09-15T06:29:08+00:00"
         },
         {
             "name": "admad/cakephp-social-auth",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/totalstudio/ts-remote-cakephp-social-auth.git",
+                "reference": "ced6fe228c5e955adfbb46dcbac4f7e3a6782b6f"
+            },
             "dist": {
-                "type": "path",
-                "url": "../dev/cakephp-social-auth",
-                "reference": "495589fe1e7e7905267aeef0a73940de39e2c713"
+                "type": "zip",
+                "url": "https://api.github.com/repos/totalstudio/ts-remote-cakephp-social-auth/zipball/ced6fe228c5e955adfbb46dcbac4f7e3a6782b6f",
+                "reference": "ced6fe228c5e955adfbb46dcbac4f7e3a6782b6f",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^5.0",
@@ -78,6 +94,7 @@
                 "cakephp/cakephp-codesniffer": "^4.0",
                 "phpunit/phpunit": "^8.5.0 || ^9.5.0"
             },
+            "default-branch": true,
             "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
@@ -103,28 +120,41 @@
                 "MIT"
             ],
             "description": "A CakePHP plugin which allows you to authenticate using social providers like Facebook/Google/Twitter etc.",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/totalstudio/ts-remote-cakephp-social-auth/tree/master"
+            },
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/ADmad"
+                }
+            ],
+            "time": "2023-09-15T06:08:40+00:00"
         },
         {
             "name": "cakephp/acl",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/totalstudio/ts-remote-acl.git",
+                "reference": "efe66170e431fe63b82cc6343a63ed8c4b7c4f7b"
+            },
             "dist": {
-                "type": "path",
-                "url": "../dev/acl",
-                "reference": "7fb3b772126c5c8a95bb8ff062aae7417588c916"
+                "type": "zip",
+                "url": "https://api.github.com/repos/totalstudio/ts-remote-acl/zipball/efe66170e431fe63b82cc6343a63ed8c4b7c4f7b",
+                "reference": "efe66170e431fe63b82cc6343a63ed8c4b7c4f7b",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^5.0",
                 "cakephp/plugin-installer": "^1.2",
-                "php": ">=7.2"
+                "php": ">=8.2"
             },
             "require-dev": {
                 "cakephp/cakephp-codesniffer": "~4.2.0",
                 "phpunit/phpunit": "^8.0"
             },
+            "default-branch": true,
             "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
@@ -159,10 +189,7 @@
                 "irc": "irc://irc.freenode.org/cakephp",
                 "source": "https://github.com/cakephp/acl"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "time": "2023-09-15T06:05:42+00:00"
         },
         {
             "name": "cakephp/authentication",
@@ -658,14 +685,20 @@
         {
             "name": "dereuromark/cakephp-cache",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/totalstudio/ts-remote-cakephp-cache.git",
+                "reference": "a347c9e9edb29d585357df47549dab09404feafa"
+            },
             "dist": {
-                "type": "path",
-                "url": "../dev/cakephp-cache",
-                "reference": "252cf89bcd3480ad43049d39397b9c07bed01816"
+                "type": "zip",
+                "url": "https://api.github.com/repos/totalstudio/ts-remote-cakephp-cache/zipball/a347c9e9edb29d585357df47549dab09404feafa",
+                "reference": "a347c9e9edb29d585357df47549dab09404feafa",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^5.0",
-                "php": ">=7.4"
+                "php": ">=8.1"
             },
             "require-dev": {
                 "dereuromark/cakephp-shim": "^2.0.0",
@@ -673,6 +706,7 @@
                 "fig-r/psr2r-sniffer": "dev-master",
                 "phpunit/phpunit": "^9.5"
             },
+            "default-branch": true,
             "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
@@ -716,10 +750,13 @@
                 "source": "https://github.com/dereuromark/cakephp-cache",
                 "issues": "https://github.com/dereuromark/cakephp-cache/issues"
             },
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "funding": [
+                {
+                    "type": "github",
+                    "url": "https://github.com/dereuromark"
+                }
+            ],
+            "time": "2023-09-15T06:30:16+00:00"
         },
         {
             "name": "friendsofcake/search",
@@ -1269,10 +1306,16 @@
         {
             "name": "mirko-pagliai/cakephp-assets",
             "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/totalstudio/ts-remote-cakephp-assets.git",
+                "reference": "80d03d9d17e084d1137e0289fd2700b94f7b2625"
+            },
             "dist": {
-                "type": "path",
-                "url": "../dev/cakephp-assets",
-                "reference": "9554e6891d58a856bf8fc650f285b5eefa50c6ff"
+                "type": "zip",
+                "url": "https://api.github.com/repos/totalstudio/ts-remote-cakephp-assets/zipball/80d03d9d17e084d1137e0289fd2700b94f7b2625",
+                "reference": "80d03d9d17e084d1137e0289fd2700b94f7b2625",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "^5.0",
@@ -1286,6 +1329,7 @@
                 "phpunit/phpunit": "^9.1|^9.5",
                 "psalm/phar": "^4.24"
             },
+            "default-branch": true,
             "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
@@ -1341,10 +1385,10 @@
             ],
             "description": "Assets plugin for CakePHP",
             "homepage": "https://github.com/mirko-pagliai/cakephp-assets",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/totalstudio/ts-remote-cakephp-assets/tree/master"
+            },
+            "time": "2023-09-15T06:00:16+00:00"
         },
         {
             "name": "mirko-pagliai/php-tools",
@@ -3650,7 +3694,7 @@
             "dist": {
                 "type": "path",
                 "url": "../dev/cms",
-                "reference": "796f73acc7d57fece0a22881fe6397d25867230c"
+                "reference": "f18f3d4317a8d9c9754b3fa14eb749ffb8500dd5"
             },
             "require": {
                 "admad/cakephp-i18n": "dev-master",
@@ -7119,10 +7163,16 @@
         {
             "name": "total-studio/install",
             "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:totalstudio/ts-plugin-install.git",
+                "reference": "3852089195480c942d7980de68f0596d7e47182e"
+            },
             "dist": {
-                "type": "path",
-                "url": "../dev/ts-plugin-install",
-                "reference": "a1f2660daf27916958bdc39dfe48f63f3d2adf1e"
+                "type": "zip",
+                "url": "https://api.github.com/repos/totalstudio/ts-plugin-install/zipball/3852089195480c942d7980de68f0596d7e47182e",
+                "reference": "3852089195480c942d7980de68f0596d7e47182e",
+                "shasum": ""
             },
             "require": {
                 "cakephp/cakephp": "*",
@@ -7131,6 +7181,7 @@
             "require-dev": {
                 "phpunit/phpunit": "^8.5 || ^9.3"
             },
+            "default-branch": true,
             "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
@@ -7147,10 +7198,11 @@
                 "MIT"
             ],
             "description": "TSInstall plugin for CakePHP",
-            "transport-options": {
-                "symlink": true,
-                "relative": true
-            }
+            "support": {
+                "source": "https://github.com/totalstudio/ts-plugin-install/tree/main",
+                "issues": "https://github.com/totalstudio/ts-plugin-install/issues"
+            },
+            "time": "2023-06-08T15:39:51+00:00"
         },
         {
             "name": "twig/markdown-extra",
