@@ -41,7 +41,6 @@ class AppController extends \TSCms\Controller\AppController
     {
         parent::initialize();
 
-        $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
 
         /*
