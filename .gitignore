@@ -19,6 +19,7 @@ Icon
 ehthumbs.db
 Thumbs.db
 .directory
+composer.lock
 
 # Tool specific files #
 #######################
