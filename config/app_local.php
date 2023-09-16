@@ -88,7 +88,7 @@ return [
             'timezone' => 'UTC',
             'flags' => [],
             'cacheMetadata' => TRUE,
-            'log' => TRUE,
+            'log' => env('DATABASE_LOG_ENABLED', false),
             'quoteIdentifiers' => FALSE,
             'url' => env('DATABASE_URL', NULL),
         ],
