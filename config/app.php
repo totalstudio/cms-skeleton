@@ -301,7 +301,7 @@ return [
             'username' => '',
             'password' => '',
             'database' => '',
-            'encoding' => 'utf8',
+            'encoding' => 'utf8mb4',
             'timezone' => 'UTC',
             'flags' => [],
             'cacheMetadata' => true,
