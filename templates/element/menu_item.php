@@ -14,8 +14,8 @@ if (!empty($data['req_action'])) {
     $urlParts['action'] = $data['req_action'];
 }
 
-if (!empty($data['model']) && $data['model'] == 'Pages' && !empty($menuUrlEntities['Pages'][$data['model_id']]['slug'])) {
-    $urlParts['slug'] = $menuUrlEntities['Pages'][$data['model_id']]['slug'];
+if (!empty($data['model']) && $data['model'] == 'Pages' && !empty($menuUrlEntities['TSCms.Pages'][$data['model_id']]['slug'])) {
+    $urlParts['slug'] = $menuUrlEntities['TSCms.Pages'][$data['model_id']]['slug'];
 }
 
 if (!empty($data['model']) && $data['model'] == 'Webshop.WebshopCategories' && !empty($menuUrlEntities['Webshop.WebshopCategories'][$data['model_id']]['slug'])) {
