@@ -315,7 +315,7 @@ return [
              * decreases performance because each query needs to be traversed and
              * manipulated before being executed.
              */
-            'quoteIdentifiers' => true,
+            'quoteIdentifiers' => false,
 
             /**
              * During development, if using MySQL < 5.6, uncommenting the
@@ -371,7 +371,7 @@ return [
             'path' => LOGS,
             'file' => 'queries',
             'url' => env('LOG_QUERIES_URL', null),
-            'scopes' => ['queriesLog'],
+            'scopes' => ['cake.database.queries'],
         ],
     ],
 
