@@ -19,6 +19,7 @@ use Cake\View\View;
 use TSCms\View\Helper\TsAdminHelper;
 use TSCms\View\Helper\TsFormHelper;
 use TSCms\View\Helper\TsHtmlHelper;
+use TSCms\View\Helper\TsUploaderHelper;
 use TSForms\View\Helper\FormCreatorHelper;
 
 /**
@@ -30,6 +31,7 @@ use TSForms\View\Helper\FormCreatorHelper;
  * @property TsAdminHelper $TsAdmin
  * @property FormCreatorHelper $FormCreator
  * @property TsHtmlHelper $TsHtml
+ * @property TsUploaderHelper $TsUploader
  * @link https://book.cakephp.org/4/en/views.html#the-app-view
  */
 class AppView extends View
