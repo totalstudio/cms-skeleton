@@ -7,10 +7,10 @@
     "require": {
         "cakephp/log": "^5.0",
         "cakephp/plugin-installer": "*",
-        "total-studio/cms": "dev-main"
+        "total-studio/cms": "dev-main",
+        "total-studio/install": "dev-main"
     },
     "require-dev": {
-        "total-studio/install": "dev-main",
         "cakephp/bake": "3.0.1",
         "cakephp/cakephp-codesniffer": "5.1.1",
         "josegonzalez/dotenv": "4.0.0",
