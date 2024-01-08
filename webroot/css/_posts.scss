@@ -1,0 +1,97 @@
+.page-post{
+  background-color: $bg;
+  .bg-white{
+    background-color: $white;
+  }
+  article {
+    .lead{
+      font-size: 18px;
+      margin-top:20px;
+      margin-bottom:10px;
+    }
+    .post-date {
+      line-height: 24px;
+      font-weight: 600;
+    }
+    .post-tags{
+      margin-top: 20px;
+      a{
+        display: inline-block;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        text-decoration: none;
+        border-radius: 15px;
+        padding: 5px 20px;
+        font-weight: 600;
+        -webkit-transition: 0.2s all;
+        -o-transition: 0.2s all;
+        transition: 0.2s all;
+        font-size: 14px;
+        color: $black;
+        background-color: #fcf1ea;
+      }
+    }
+  }
+  aside{
+    .section-title{
+      font-size:24px;
+      font-family: $fontSecondary;
+      font-weight: 700;
+    }
+    .post-list {
+      .post-item-small {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+
+        a {
+          font-family: $fontSecondary;
+          font-size: 15px;
+          color: $black;
+        }
+
+        .post-date {
+          font-size: 12px;
+          line-height: 12px;
+          font-weight: 300;
+        }
+        &:last-of-type{
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+
+
+}
+
+.post-item{
+  .card-body{
+    padding:30px;
+  }
+  .post-image {
+    position: relative;
+    .post-category {
+      top: 32px;
+      position: absolute;
+      left: 0;
+      background: #fcf1ea;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 5px 20px 5px 10px;
+      border-radius: 0 50px 50px 0;
+    }
+  }
+  .post-title{
+    a{
+      color: $black;
+      font-size: 24px;
+      font-family: $fontSecondary;
+      font-weight: 600;
+    }
+  }
+  .post-lead{
+    color: $fontColor;
+    margin-bottom: 40px;
+  }
+}

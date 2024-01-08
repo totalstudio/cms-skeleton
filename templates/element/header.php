@@ -6,12 +6,7 @@
         <div class="row">
             <div class="col-auto text-start align-self-center">
                 <div class="logo-holder">
-                    <a href="/"><?= $this->Html->image('TSCms.logo.png', [
-                            'alt'   => '{{brand}}',
-                            'class' => 'header-logo',
-                            'width' => 208,
-                            'height' => 31
-                        ]) ?></a>
+                    <a href="/">First Blog</a>
                 </div>
             </div>
             <div class="col-auto d-xl-none text-end align-self-center navbar-light">

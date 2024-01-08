@@ -5,6 +5,7 @@ use Cake\Database\Connection;
 use Cake\Database\Driver\Mysql;
 use Cake\Log\Engine\FileLog;
 use Cake\Mailer\Transport\MailTransport;
+use Cake\Mailer\Transport\SmtpTransport;
 
 return [
     /*
@@ -227,23 +228,22 @@ return [
      * 'YourTransport.php', where 'Your' is the name of the transport.
      */
     'EmailTransport' => [
+        'smtp' => [
+            'className' => SmtpTransport::class,
+            'host' => env('EMAIL_TRANSPORT_HOST', 'localhost'),
+            'port' => env('EMAIL_TRANSPORT_PORT', 25),
+            'timeout' => 30,
+            'username' => env('EMAIL_TRANSPORT_USERNAME'),
+            'password' => env('EMAIL_TRANSPORT_PASSWORD'),
+            'client' => null,
+            'tls' => env('EMAIL_TRANSPORT_TLS', false),
+            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
         'default' => [
             'className' => MailTransport::class,
-            /*
-             * The keys host, port, timeout, username, password, client and tls
-             * are used in SMTP transports
-             */
-            'host' => 'localhost',
-            'port' => 25,
-            'timeout' => 30,
-            /*
-             * It is recommended to set these options through your environment or app_local.php
-             */
-            //'username' => null,
-            //'password' => null,
-            'client' => null,
-            'tls' => false,
-            'url' => env('EMAIL_TRANSPORT_DEFAULT_URL', null),
+        ],
+        'queue' => [
+            'className' => 'Queue'
         ],
     ],
 
@@ -258,7 +258,7 @@ return [
      */
     'Email' => [
         'default' => [
-            'transport' => 'default',
+            'transport' => env('EMAIL_TRANSPORT', 'default'),
             'from' => 'you@localhost',
             /*
              * Will by default be set to config value of App.encoding, if that exists otherwise to UTF-8.

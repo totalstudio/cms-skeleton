@@ -1,11 +1,22 @@
-.page-0{
-  section.top{
-    padding:0;
-    img{
-      width:100%;
-      height:200px;
+.page-main {
+  section.top {
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 200px;
       object-fit: cover;
     }
+  }
+}
+
+.page-sub {
+  padding-top:60px;
+  section.top {
+    padding-bottom:0;
+  }
+  header{
+    background-color: #fcf1ea;
   }
 }
 
@@ -14,28 +25,72 @@
 Section styles
  */
 
-section{
-  padding-top:50px;
-  padding-bottom:50px;
+section {
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  &.bg-gray{
+    background-color: #FBF7F5;
+  }
 }
+
+
 //slider
 section.slider-container {
+  background-image: linear-gradient(90deg, $bg 60%, #FCF1EA 60%);
+  padding: 100px 0 80px 0 !important;
 
-  padding:0!important;
-
-  .row, .col-12{
-    padding:0;
-    margin:0;
+  .row, .col-12 {
+    padding: 0;
+    margin: 0;
   }
 
-  #slider {
-    height: 600px;
+  .carousel-item {
+    display: flex;
+    flex-wrap: wrap;
+    .carousel-caption {
+      color: $black;
+      text-align: left;
+      padding-right: 80px;
+      flex: 0 0 auto;
+      width: 60%;
+      position: relative;
+      display: block;
+      align-self: center;
+      left:0;
+      right: auto;
+      order:1;
+      h1, h2 {
+        font-size: 58px;
+        line-height: 1.2em;
+        font-weight: 600;
+        margin-bottom: 20px;
+      }
+      .carousel-caption-lead{
+        color: $fontColor;
+        line-height: 1.5em;
+        margin-bottom:30px;
+      }
+    }
+
+    .image-container {
+      flex: 0 0 auto;
+      width: 40%;
+      max-height: 530px;
+      align-self: center;
+      order:2;
+      img{
+        height:100%;
+        width:100%;
+        object-fit: cover ;
+      }
+    }
   }
 }
 
-.row.owl-carousel{
-  .col-12{
-    width:100%!important;
+.row.owl-carousel {
+  .col-12 {
+    width: 100% !important;
   }
 }
 
@@ -43,3 +98,25 @@ section.slider-container {
 /**
 PageBox styles
  */
+
+.box{
+  .inner{
+    h2{
+      margin-bottom: 20px;
+      a{
+        color: $black;
+      }
+    }
+  }
+}
+
+.bg-orange{
+  .box{
+    background-color: #fcf1ea;
+    padding:15px;
+    @include lg{
+      padding:30px;
+    }
+
+  }
+}

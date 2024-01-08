@@ -24,7 +24,7 @@
         ]);
 
         echo $this->Asset->css([
-            'TSCms.style'
+            'style'
         ]);
 
         if(!empty($this->fetch('social'))){
@@ -70,7 +70,7 @@
         if($adminEdit){
             $adminClass = 'admin';
         }
-        $this->TsHtml->getGoogleFont('family=Poppins:wght@300;400');
+        $this->TsHtml->getGoogleFont('family=Inter:wght@400;600&family=Lora:wght@500;600;700');
 
         echo $this->fetch('preload');
 

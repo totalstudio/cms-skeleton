@@ -5,10 +5,12 @@
 }
 
 //Colors
-$black: #000000;
+$black: #111314;
 $white: #FFFFFF;
 $red: #fa5c5c;
-$highlight: #007cf6;
+$highlight: #F5A834;
+$fontColor: #737373;
+$bg: #FCF9F8;
 $grid-gutter-width: 15px;
 
 :root {
@@ -16,95 +18,229 @@ $grid-gutter-width: 15px;
   --mainWhite: #{$white};
   --mainRed: #{$red};
   --mainHighlight: #{$highlight};
+  --mainfontColor: #{$fontColor};
   --bs-gutter-x: #{$grid-gutter-width};
 }
 
 //fonts
-$fontPrimary: 'Poppins', sans-serif;;
-$fontSecondary: 'Comfortaa', cursive;;
+$fontPrimary: 'Inter', sans-serif;
+;
+$fontSecondary: 'Lora', serif;
+;
 
 html {
   scroll-behavior: smooth;
 }
-body{
+
+body {
   font-family: $fontPrimary;
   color: $black;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 
-  main{
+  main {
     flex: 1;
   }
 
-  h1, h2, h3{
+  h1, h2, h3 {
     font-family: $fontSecondary;
   }
-  a{
+
+  h1 {
+    font-size: 40px;
+    font-weight: 600;
+  }
+
+  a {
     @include transition(all .2s ease-in-out);
+
     text-decoration: none;
-    &:hover{
+
+    &:hover {
       text-decoration: none;
     }
+
+    &.more-link {
+      font-size: 16px;
+      fill: $black;
+      color: $black;
+      padding-bottom: 0;
+      border-bottom: 2px solid $highlight;
+      display: inline-block;
+      font-weight: 600;
+
+      &:hover {
+        padding-bottom: 2px;
+      }
+    }
   }
-  img{
+
+  img {
     height: auto;
   }
-  .row{
-    --bs-gutter-x: 30px!important;
+
+  .row {
+    --bs-gutter-x: 30px !important;
+  }
+
+
+  .more{
+    border: none;
+    border-radius: 30px 30px 30px 30px;
+    padding: 10px 32px 10px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    fill: #D78A16;
+    background-color: #D78A16;
+    color: $black;
+    margin-top:10px;
+    display: inline-block;
   }
 }
-.error-message{
+
+.error-message {
   color: $red;
 }
+
 //header
-header{
-  position: sticky;
+header {
+  position: fixed;
   z-index: 50;
-  background: $highlight;
-  padding: 15px 0;
+  padding: 0px 0;
   top: 0;
+  width: 100%;
+  @include transition(all .2s ease-in-out);
+
+  .logo-holder {
+    text-transform: uppercase;
+    font-family: $fontSecondary;
+    font-size: 24px;
+    font-weight: 600;
+
+    a {
+      color: $black;
+    }
+  }
+
   .navbar {
-    background: $highlight;
     left: 0;
-    padding: 30px;
+    padding: 5px 30px;
     position: absolute;
     text-align: left;
     top: 0;
     width: 100%;
     z-index: 1;
-    ul{
-      &>li{
-        padding: 0 15px;
-        a{
-          color: $white;
-          &:hover{
+
+    & > .navbar-collapse {
+      & > ul {
+        & > li {
+          padding: 25px 15px;
+          position: relative;
+
+          a {
             color: $black;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+
+            &:hover {
+              color: $black;
+            }
+
+          }
+
+          &:hover {
+            ul {
+              display: block;
+            }
+          }
+
+          & > ul {
+            display: none;
+            position: absolute;
+            list-style: none;
+            margin: 15px 0;
+            padding: 20px 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: $white;
+            -webkit-box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.08);
+            box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.08);
+
+            li {
+              background-color: $white;
+            }
           }
         }
       }
+
     }
-    @include lg{
-      background:initial;
+
+    @include lg {
+      background: initial;
       position: static;
       width: auto;
       text-align: right;
     }
   }
+
+  &.scrolled {
+    background-color: #fcf1ea;
+  }
 }
 
 
 //footer
-footer{
-  .top{
-    background: $highlight;
-    color: $white;
-    a{
-      color: $white;
-      &:hover{
+footer {
+  .footer-top {
+    background: $white;
+    border-top: 1px solid #efefef;
+    font-size: 14px;
+    color: #676f72;
+
+    .footer-title {
+      font-family: $fontSecondary;
+      color: $black;
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    a {
+      color: $black;
+
+      &:hover {
         color: $highlight;
       }
     }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        display: block;
+        line-height: 24px;
+        margin-bottom: 10px;
+
+        a {
+
+        }
+      }
+    }
+
+    .fab {
+      font-size: 20px;
+      margin-right: 10px;
+    }
+  }
+
+  .footer-bottom {
+    background: $white;
+    border-top: 1px solid #efefef;
   }
 }
 
@@ -131,28 +267,14 @@ footer{
     bottom: 60px;
     right: 40px;
   }
+
   &:focus {
     outline: none;
   }
 }
 
-.error{
-  margin-top:200px;
-  margin-bottom:200px;
-  .clip{
-    display: inline-block;
-    margin: 20px;
-    font-size: 50px;
-    .shadow{
-      width:90px;
-      height:90px;
-      background-color: $highlight;
-      border-radius: 50%;
-      color: $white;
-      line-height: 90px;
 
-    }
-  }
-}
-
+@import 'components';
+@import 'forms';
 @import 'pages';
+@import 'posts';
