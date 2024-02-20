@@ -1,38 +1,18 @@
-# CakePHP Application Skeleton
+# TotalStudio CMS Website Skeleton
 
-![Build Status](https://github.com/cakephp/app/actions/workflows/ci.yml/badge.svg?branch=master)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
-[![PHPStan](https://img.shields.io/badge/PHPStan-level%207-brightgreen.svg?style=flat-square)](https://github.com/phpstan/phpstan)
-
-A skeleton for creating applications with [CakePHP](https://cakephp.org) 5.x.
+A skeleton for creating web applications with [CakePHP](https://cakephp.org) 5.x.
 
 The framework source code can be found here: [cakephp/cakephp](https://github.com/cakephp/cakephp).
 
 ## Installation
 
-1. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `composer create-project totalstudio/app [app-name] --repository "{\"type\":\"vcs\",\"url\":\"https://github.com/totalstudio/cms-skeleton\"}" --stability=dev --ignore-platform-reqs`.
+1. clone the project skeleton (if you read this you already did it):)
+2. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
+3. Run `composer install`.
+4. rename the app_local.example.php to app_local.php
+5. start the cake server `bin/cake server -p 8765`
+6. visit `http://localhost:8765/install` to see the welcome page.
 
-If Composer is installed globally, run
-
-```bash
-composer create-project --prefer-dist cakephp/app
-```
-
-In case you want to use a custom app dir name (e.g. `/myapp/`):
-
-```bash
-composer create-project --prefer-dist cakephp/app myapp
-```
-
-You can now either use your machine's webserver to view the default home page, or start
-up the built-in webserver with:
-
-```bash
-bin/cake server -p 8765
-```
-
-Then visit `http://localhost:8765` to see the welcome page.
 
 ## Update
 
