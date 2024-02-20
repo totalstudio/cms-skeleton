@@ -514,4 +514,70 @@ PageBox styles
   margin-bottom: 40px;
 }
 
+.page-recipe {
+  background-color: #FCF9F8;
+}
+.page-recipe .bg-white {
+  background-color: #FFFFFF;
+}
+.page-recipe article .lead {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.page-recipe article .recipe-date {
+  line-height: 24px;
+  font-weight: 600;
+}
+.page-recipe aside .section-title {
+  font-size: 24px;
+  font-family: "Lora", serif;
+  font-weight: 700;
+}
+.page-recipe aside .recipe-list .recipe-item-small {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+}
+.page-recipe aside .recipe-list .recipe-item-small a {
+  font-family: "Lora", serif;
+  font-size: 15px;
+  color: #111314;
+}
+.page-recipe aside .recipe-list .recipe-item-small .post-date {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+}
+.page-recipe aside .recipe-list .recipe-item-small:last-of-type {
+  border-bottom: 0;
+}
+
+.recipe-item .card-body {
+  padding: 30px;
+}
+.recipe-item .recipe-image {
+  position: relative;
+}
+.recipe-item .recipe-image .post-category {
+  top: 32px;
+  position: absolute;
+  left: 0;
+  background: #fcf1ea;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 5px 20px 5px 10px;
+  border-radius: 0 50px 50px 0;
+}
+.recipe-item .recipe-title a {
+  color: #111314;
+  font-size: 24px;
+  font-family: "Lora", serif;
+  font-weight: 600;
+}
+.recipe-item .recipe-lead {
+  color: #737373;
+  margin-bottom: 40px;
+}
+
 /*# sourceMappingURL=style.css.map */
