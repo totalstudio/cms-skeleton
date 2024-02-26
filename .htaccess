@@ -18,6 +18,9 @@ RewriteRule ^(.*)/$ /$1 [L,R=301]
     SetOutputFilter DEFLATE
 </IfModule>
 
+<IfModule mod_headers.c>
+    Header always set X-Frame-Options SAMEORIGIN
+</IfModule>
 
 <IfModule mod_expires.c>
     # Enable expirations
