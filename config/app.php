@@ -17,7 +17,7 @@ return [
      * Development Mode:
      * true: Errors and warnings shown.
      */
-    'debug' => filter_var(env('DEBUG', false), FILTER_VALIDATE_BOOLEAN),
+    'debug' => filter_var(env('DEBUG', true), FILTER_VALIDATE_BOOLEAN),
 
     /*
      * Configure basic information about the application.
@@ -296,12 +296,12 @@ return [
             'className' => Connection::class,
             'driver' => Mysql::class,
             'persistent' => false,
-            'host' => '127.0.0.1',
-            'port' => 3306,
-            'username' => '',
-            'password' => '',
-            'database' => '',
-            'encoding' => 'utf8mb4',
+            'host' => env('DATABASE_HOST', '127.0.0.1'),
+            'port' => env('DATABASE_PORT', 3306),
+            'username' => env('DATABASE_USERNAME', ''),
+            'password' => env('DATABASE_PASSWORD', ''),
+            'database' => env('DATABASE_DATABASE', false),
+            'encoding' => env('DATABASE_ENCODING', 'utf8mb4'),
             'timezone' => 'UTC',
             'flags' => [],
             'cacheMetadata' => true,
