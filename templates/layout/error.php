@@ -67,24 +67,19 @@
 
     $this->TsHtml->preloadImages($preloadImages??[]);
 
-    if($adminEdit){
-        $adminClass = 'admin';
-    }
-    $this->TsHtml->getGoogleFont('family=Comfortaa&family=Poppins:wght@400;600');
+    $this->TsHtml->getGoogleFont('family=Inter:wght@400;600&family=Lora:wght@500;600;700');
 
     echo $this->fetch('preload');
 
     echo $this->fetch('custom_metas');
     ?>
 </head>
-<body <?=(!empty($pageClass) || !empty($adminClass)?'class="'.(!empty($pageClass)?$pageClass:null).' '.(!empty($adminClass)?$adminClass:null).'"':'')?>>
+<body <?=(!empty($pageClass) || !empty($adminEdit) ? 'class="' . (!empty($pageClass) ? $pageClass : null) . ' ' . (!empty($adminEdit) ? 'admin' : null) . '"' : '')?>>
 <?php
 echo $this->TsHtml->gTagManager(true);
 echo $this->TsHtml->fbPixel();
-echo $this->Html->tag('div','',['class' => 'message-fixed']);
-
 if($adminEdit) {
-    echo $this->element('adminbar');
+    echo $this->element('TSCms.adminbar');
 }
 
 echo $this->element('header');

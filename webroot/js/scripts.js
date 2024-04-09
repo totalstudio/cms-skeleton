@@ -5,13 +5,13 @@ jQuery.event.special.touchstart = {
 };
 
 $(document).ready(function(){
-    if ($(this).scrollTop() > 140) {
+    if ($(this).scrollTop() > 20) {
         $('header').addClass('scrolled');
     } else if ($(this).scrollTop() < 100) {
         $('header').removeClass('scrolled');
     }
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 140) {
+        if ($(this).scrollTop() > 20) {
             $('header').addClass('scrolled');
         } else if ($(this).scrollTop() < 100) {
             $('header').removeClass('scrolled');

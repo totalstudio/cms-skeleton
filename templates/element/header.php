@@ -1,7 +1,7 @@
 <?php
 /** @var \App\View\AppView $this */
 ?>
-<header class="<?= !empty($headerClass) ? $headerClass : '' ?>">
+<header class="header-fixed">
     <div class="container">
         <div class="row">
             <div class="col-auto text-start align-self-center">
