@@ -5,7 +5,7 @@
     <?php
 
     echo $this->Html->charset();
-
+    
     /** @var \App\View\AppView $this */
     $this->TsHtml->setSettings($ts_settings);
 
@@ -27,24 +27,6 @@
         'style'
     ]);
 
-    if(!empty($this->fetch('social'))){
-        echo $this->fetch('social');
-    }else{
-        $this->start('social');
-
-        echo $this->TsSocialShare->metaTags(
-            [],
-            'website',
-            $this->TsHtml->pageTitle($this->fetch('title'), '-', true),
-            $this->TsHtml->pageDescription($this->fetch('description'), true),
-            $this->Url->image(!empty($this->fetch('image'))?$this->fetch('image'):'facebook.jpg',[ 'fullBase' => true])
-
-        );
-
-        $this->end();
-        echo $this->fetch('social');
-    }
-
     echo $this->fetch('custom_metas');
 
 
@@ -61,13 +43,9 @@
 
     echo $this->TsHtml->gTagManager();
 
-    echo $this->TsMicroData->generateMicroData();
+    echo $this->TsHtml->getFacebookVerification();
 
-    $this->TsHtml->getFacebookVerification();
-
-    $this->TsHtml->preloadImages($preloadImages??[]);
-
-    $this->TsHtml->getGoogleFont('family=Inter:wght@400;600&family=Lora:wght@500;600;700');
+    echo $this->TsHtml->getGoogleFont('family=Inter:wght@400;600&family=Lora:wght@500;600;700');
 
     echo $this->fetch('preload');
 
