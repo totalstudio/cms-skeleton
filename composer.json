@@ -65,10 +65,6 @@
         },
         {
             "type": "vcs",
-            "url": "https://github.com/totalstudio/ts-remote-cakephp-assets"
-        },
-        {
-            "type": "vcs",
             "url": "https://github.com/totalstudio/ts-remote-cakephp-social-auth"
         },
         {
