@@ -40,6 +40,9 @@ class Application extends BaseApplication
      */
     public function bootstrap(): void
     {
+        // Load Studio CMS
+        $this->addPlugin(\TSCms\Plugin::class);
+
         // Call parent to load bootstrap from files.
         parent::bootstrap();
 
@@ -60,8 +63,7 @@ class Application extends BaseApplication
             //$this->addPlugin('DebugKit');
         //}
         
-        // Load Studio CMS
-        $this->addPlugin(\TSCms\Plugin::class);
+
 
     }
 

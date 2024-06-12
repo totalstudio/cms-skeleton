@@ -84,7 +84,7 @@ use Cake\Utility\Security;
 try {
     Configure::config('default', new PhpConfig());
     Configure::load('app', 'default', false);
-    Configure::load('studio', 'default', false);
+    Configure::load('studio');
 } catch (\Exception $e) {
     exit($e->getMessage() . "\n");
 }
