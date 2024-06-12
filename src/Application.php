@@ -23,7 +23,6 @@ use Cake\Error\Middleware\ErrorHandlerMiddleware;
 use Cake\Http\BaseApplication;
 use Cake\Http\MiddlewareQueue;
 use Cake\ORM\Locator\TableLocator;
-use Cake\Routing\Middleware\AssetMiddleware;
 
 /**
  * Application setup class.
@@ -40,9 +39,6 @@ class Application extends BaseApplication
      */
     public function bootstrap(): void
     {
-        // Load Studio CMS
-        $this->addPlugin(\TSCms\Plugin::class);
-
         // Call parent to load bootstrap from files.
         parent::bootstrap();
 
@@ -62,8 +58,9 @@ class Application extends BaseApplication
         //if (Configure::read('debug')) {
             //$this->addPlugin('DebugKit');
         //}
-        
 
+        // Load Studio CMS
+        $this->addPlugin(\TSCms\Plugin::class);
 
     }
 
@@ -75,15 +72,6 @@ class Application extends BaseApplication
      */
     public function middleware(MiddlewareQueue $middlewareQueue): MiddlewareQueue
     {
-        $middlewareQueue
-            // Catch any exceptions in the lower layers,
-            // and make an error page/response
-            ->add(new ErrorHandlerMiddleware(Configure::read('Error')))
-
-            // Handle plugin/theme assets like CakePHP normally does.
-            ->add(new AssetMiddleware([
-                'cacheTime' => Configure::read('Asset.cacheTime'),
-            ]));
         return $middlewareQueue;
     }
 
