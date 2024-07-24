@@ -83,10 +83,10 @@ if (!empty($adminEdit)) {
     echo $this->TsForm->input('_locale', FALSE, ['type' => 'hidden', 'value' => $lng]);
 
     $this->start('h1');
-    echo $this->TsForm->inlineWysiwyg('title', $entity->title, ['tag' => 'h1'], ['toolbar1' => 'save undo redo', 'menubar' => false,  'forced_root_block' => false]);
+    echo $this->TsForm->inlineWysiwyg('title', $entity->title, ['tag' => 'h1'], ['toolbar1' => 'save undo redo', 'menubar' => false]);
     $this->end('h1');
     $this->start('pre');
-    echo $this->TsForm->inlineWysiwyg('description', $entity->description, ['toolbar1' => 'save undo redo', 'menubar' => false,  'forced_root_block' => false]);
+    echo $this->TsForm->inlineWysiwyg('description', $entity->description, ['toolbar1' => 'save undo redo', 'menubar' => false]);
     $this->end('pre');
 
     if (!empty($entity) && $entity->has('page_widgets')) {

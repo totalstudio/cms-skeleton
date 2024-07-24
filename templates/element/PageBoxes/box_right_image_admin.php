@@ -8,7 +8,7 @@
                             'page_widgets[' . $widgetNum . '][page_text][title]',
                             $widget->page_text->title,
                             ['tag' => 'h2'],
-                            ['toolbar1' => 'save undo redo',  'forced_root_block' => false, 'menubar' => false]
+                            ['toolbar1' => 'save undo redo', 'menubar' => false]
                     );
                     if(!empty($widget->page_text->url)) {
                         echo $this->Html->link($this->Html->tag('span', '', ['class' => 'fas fa-link']), $widget->page_text->url, [

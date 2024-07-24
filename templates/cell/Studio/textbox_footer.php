@@ -26,7 +26,7 @@ if ($adminEdit) {
         'save[' . $text->id . '][title]',
         $text->title,
         ['tag' => 'div', 'class' => 'footer-title'],
-        ['toolbar1' => 'save undo redo',  'forced_root_block' => false,'menubar' => false]
+        ['toolbar1' => 'save undo redo', 'menubar' => false]
     );
     echo $this->TsForm->inlineWysiwyg(
         'save[' . $text->id . '][content]',
