@@ -18,6 +18,7 @@ namespace App\View;
 use Cake\View\View;
 use TSCms\View\Helper\TsAdminHelper;
 use TSCms\View\Helper\TsFormHelper;
+use TSCms\View\Helper\TsGoogleEventHelper;
 use TSCms\View\Helper\TsHtmlHelper;
 use TSCms\View\Helper\TsUploaderHelper;
 use TSForms\View\Helper\FormCreatorHelper;
@@ -32,6 +33,7 @@ use TSForms\View\Helper\FormCreatorHelper;
  * @property FormCreatorHelper $FormCreator
  * @property TsHtmlHelper $TsHtml
  * @property TsUploaderHelper $TsUploader
+ * @property TsGoogleEventHelper $TsGoogleEvent
  * @link https://book.cakephp.org/4/en/views.html#the-app-view
  */
 class AppView extends View

@@ -17,7 +17,7 @@
 
     echo $this->TsHtml->pageDescription($this->fetch('description'));
 
-    $this->TsHtml->favicon();
+    echo $this->TsHtml->favicon();
 
     echo $this->Html->css([
         'TSCms./lib/bootstrap/5_current/css/bootstrap.min.css',
