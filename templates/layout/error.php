@@ -94,7 +94,6 @@ echo $this->TsHtml->getFontawesome('5_13_0', ['solid-900', 'brands-400'], ['soli
 
 echo $this->Html->css([
     'TSCms./lib/fancybox/3_x/dist/jquery.fancybox.min.css',
-    'TSCms./lib/jquery_ui/1_12_1/css/jquery-ui.min.css',
 ]);
 
 if($adminEdit) {
