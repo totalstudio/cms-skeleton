@@ -46,7 +46,7 @@ use Cake\Core\Configure;
                                 $size = ($isMobile ? 'tn' : 'normal');
                                 if($i==0) {
                                     $this->start('preload');
-                                    $this->TsHtml->preloadImages([$image->{$size.'_picture'}]);
+                                        echo $this->TsHtml->preloadImages([$image->{$size.'_picture'}]);
                                     $this->end();
                                 }
                                 ?>
