@@ -55,7 +55,7 @@ use Cake\Core\Configure;
                                     <?= $this->TsHtml->image($image, [
                                         'size' => $size,
                                         'autoParams' => true,
-                                        'lazy' => false,
+                                        'lazy' => ($i==0 ? false : true),
                                         'alt' => strip_tags($image->title)]) ?>
                                 </div>
 
