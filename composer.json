@@ -5,6 +5,7 @@
     "type": "project",
     "license": "MIT",
     "require": {
+        "cakephp/log": "^5.1",
         "cakephp/plugin-installer": "*",
         "total-studio/cms": "dev-main",
         "total-studio/install": "dev-main"
