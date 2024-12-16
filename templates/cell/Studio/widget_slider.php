@@ -45,9 +45,15 @@ use Cake\Core\Configure;
                             if(!empty($image->picture)){
                                 $size = ($isMobile ? 'tn' : 'normal');
                                 if($i==0) {
-                                    $this->start('preload');
-                                        echo $this->TsHtml->preloadImages([$image->{$size.'_picture'}]);
-                                    $this->end();
+                                    $rootView->start('preload');
+                                    $images = $this->TsHtml->image($image, [
+                                        'size' => $size,
+                                        'returnWithOnlyPaths' => true
+                                    ]);
+                                    echo $rootView->TsHtml->preloadImages(array_map(function($item) {
+                                        return $item['srcset'];
+                                    }, $images));
+                                    $rootView->end();
                                 }
                                 ?>
 
