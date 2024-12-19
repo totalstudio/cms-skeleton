@@ -145,34 +145,6 @@ return [
             'duration' => '+1 years',
             'url' => env('CACHE_CAKEROUTES_URL', null),
         ],
-        'menu' => [
-            'className' => 'File',
-            'path'      => CACHE . 'menu/',
-            'groups' => ['menu'],
-            'duration'  => '+7 days',
-            'url'       => env('CACHE_DEFAULT_URL', NULL),
-        ],
-        'text_box' => [
-            'className' => 'File',
-            'path'      => CACHE . 'textbox/',
-            'groups' => ['text_box'],
-            'duration'  => '+7 days',
-            'url'       => env('CACHE_DEFAULT_URL', NULL),
-        ],
-        'redirect' => [
-            'className' => 'File',
-            'path'      => CACHE . 'redirects/',
-            'groups' => ['redirect'],
-            'duration'  => '+7 days',
-            'url'       => env('CACHE_DEFAULT_URL', NULL),
-        ],
-        'database_configs' => [
-            'className' => 'File',
-            'path'      => CACHE,
-            'groups' => ['database_configs'],
-            'duration'  => '+7 days',
-            'url'       => env('CACHE_DEFAULT_URL', NULL),
-        ],
     ],
 
     /*
