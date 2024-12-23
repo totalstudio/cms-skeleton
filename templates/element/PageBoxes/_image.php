@@ -9,6 +9,9 @@ if(isset($size)){
 }else{
     $givenSize = Configure::read('TSCms.PageTexts.image.picture.defaultSize');
 }
+if($isMobile && Configure::read('TSCms.PageTexts.image.picture.sizes')[$givenSize.'_mobile'] ?? false){
+    $givenSize = $givenSize.'_mobile';
+}
 if (!empty($widget->page_text->picture)) {
     $img = $widget->page_text;
     $mainImage = $this->TsHtml->image(

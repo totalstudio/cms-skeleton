@@ -433,6 +433,51 @@ PageBox styles
   }
 }
 
+.has-image {
+  display: flex;
+  flex-wrap: wrap;
+}
+.has-image .main-image {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.has-image .inner {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.has-image.image_right .main-image {
+  order: 2;
+}
+@media (min-width: 992px) {
+  .has-image.image_right .main-image {
+    width: 50%;
+  }
+}
+.has-image.image_right .inner {
+  order: 1;
+}
+@media (min-width: 992px) {
+  .has-image.image_right .inner {
+    width: 50%;
+  }
+}
+.has-image.image_left .main-image {
+  order: 1;
+}
+@media (min-width: 992px) {
+  .has-image.image_left .main-image {
+    width: 50%;
+  }
+}
+.has-image.image_left .inner {
+  order: 2;
+}
+@media (min-width: 992px) {
+  .has-image.image_left .inner {
+    width: 50%;
+  }
+}
+
 .page-post {
   background-color: #FCF9F8;
 }

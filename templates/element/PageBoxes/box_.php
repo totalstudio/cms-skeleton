@@ -1,4 +1,4 @@
-<div class="box<?= (!empty($widget->page_text->picture) ? ' has-image' : NULL) ?>">
+<div class="box<?= (!empty($widget->page_text->picture) ? ' has-image' : NULL) ?> image_<?=$widget->custom_fields['image_position']??'center'?>">
     <?php
     if(!empty($widget->page_text->picture)):
         echo $this->element('PageBoxes/_image', ['widget' => $widget]);

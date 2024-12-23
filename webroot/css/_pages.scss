@@ -120,3 +120,44 @@ PageBox styles
 
   }
 }
+
+.has-image{
+  display: flex;
+  flex-wrap: wrap;
+  .main-image{
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  .inner{
+    flex: 0 0 auto;
+    width: 100%;
+  }
+  &.image_right{
+    .main-image{
+      order: 2;
+      @include lg {
+        width: 50%;
+      }
+    }
+    .inner{
+      order: 1;
+      @include lg {
+        width: 50%;
+      }
+    }
+  }
+  &.image_left{
+    .main-image{
+      order: 1;
+      @include lg {
+        width: 50%;
+      }
+    }
+    .inner{
+      order: 2;
+      @include lg {
+        width: 50%;
+      }
+    }
+  }
+}

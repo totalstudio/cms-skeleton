@@ -1,4 +1,4 @@
-<div class="box<?=(!empty($widget->page_text->picture)?' has-image admin':null)?>">
+<div class="box<?=(!empty($widget->page_text->picture)?' has-image admin':null)?> image_<?=$widget->custom_fields['image_position']??'center'?>">
     <?php
     if(!empty($widget->page_text->picture)):
         echo $this->element('PageBoxes/_image_admin', ['widget' => $widget, 'widgetNum' => $widgetNum]);
