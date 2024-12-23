@@ -6,6 +6,10 @@
     ?>
     <div class="inner <?= !empty($widget->page_text->more_btn_text) ? 'has-button' : '' ?>">
         <?php
+        if(!empty($widget->special['subtitle'])) {
+            echo $this->Html->tag('div', $widget->special['subtitle'], ['class' => 'subtitle']);
+        }
+
         if(!empty($widget->page_text->title)) {
             echo $this->Html->tag('h2', (!empty($widget->page_text->url) ? $this->Html->link($widget->page_text->title, $widget->page_text->url, ['escape' => FALSE]) : $widget->page_text->title));
         }

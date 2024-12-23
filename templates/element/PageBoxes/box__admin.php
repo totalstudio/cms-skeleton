@@ -6,6 +6,15 @@
     ?>
     <div class="inner <?= !empty($widget->page_text->more_btn_text) ? 'has-button' : '' ?>">
         <?php
+        if(!empty($widget->special['subtitle'])) {
+            echo $this->TsForm->inlineWysiwyg(
+                'page_widgets[' . $widgetNum . '][special][subtitle]',
+                $widget->page_text->title,
+                ['tag' => 'div', 'class' => 'subtitle'],
+                ['toolbar1' => 'save undo redo', 'menubar' => false]
+            );
+        }
+
         if (!empty($widget->page_text->title)) {
             echo $this->TsForm->inlineWysiwyg(
                     'page_widgets[' . $widgetNum . '][page_text][title]',
