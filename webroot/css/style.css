@@ -4,7 +4,6 @@
   --mainRed: #fa5c5c;
   --mainHighlight: #F5A834;
   --mainfontColor: #737373;
-  --bs-gutter-x: 15px;
 }
 
 html {
@@ -52,9 +51,6 @@ body a.more-link:hover {
 }
 body img {
   height: auto;
-}
-body .row {
-  --bs-gutter-x: 30px !important;
 }
 body .more {
   border: none;

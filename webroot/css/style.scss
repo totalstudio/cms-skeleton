@@ -11,7 +11,6 @@ $red: #fa5c5c;
 $highlight: #F5A834;
 $fontColor: #737373;
 $bg: #FCF9F8;
-$grid-gutter-width: 15px;
 
 :root {
   --mainBlack: #{$black};
@@ -19,7 +18,6 @@ $grid-gutter-width: 15px;
   --mainRed: #{$red};
   --mainHighlight: #{$highlight};
   --mainfontColor: #{$fontColor};
-  --bs-gutter-x: #{$grid-gutter-width};
 }
 
 //fonts
@@ -79,11 +77,6 @@ body {
   img {
     height: auto;
   }
-
-  .row {
-    --bs-gutter-x: 30px !important;
-  }
-
 
   .more{
     border: none;
