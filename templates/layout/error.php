@@ -17,7 +17,7 @@
 
     echo $this->TsHtml->pageDescription($this->fetch('description'));
 
-    $this->TsHtml->favicon();
+    echo $this->TsHtml->favicon();
 
     echo $this->Html->css([
         'TSCms./lib/bootstrap/5_current/css/bootstrap.min.css',
@@ -63,11 +63,11 @@
 
     echo $this->TsMicroData->generateMicroData();
 
-    $this->TsHtml->getFacebookVerification();
+    echo $this->TsHtml->getFacebookVerification();
 
     $this->TsHtml->preloadImages($preloadImages??[]);
 
-    $this->TsHtml->getGoogleFont('family=Inter:wght@400;600&family=Lora:wght@500;600;700');
+    echo $this->TsHtml->getGoogleFont('family=Inter:wght@400;600&family=Lora:wght@500;600;700');
 
     echo $this->fetch('preload');
 
