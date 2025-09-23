@@ -7,7 +7,7 @@ The framework source code can be found here: [cakephp/cakephp](https://github.co
 ## Installation
 
 1. clone the project skeleton (if you read this you already did it):)
-2. If you want to develop packages too copy `composer.local.example.json` to `composer.example.json` and create a dev folder next to your rpject. it will symlink the packages from there.
+2. If you want to develop packages too copy `composer.local.example.json` to `composer.local.json` and create a dev folder next to your rpject. it will symlink the packages from there.
 3. Download [Composer](https://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
 4. Run `composer install`.
 5. rename the app_local.example.php to app_local.php
