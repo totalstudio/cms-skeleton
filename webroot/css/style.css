@@ -53,9 +53,6 @@ body a.more-link:hover {
 body img {
   height: auto;
 }
-body .row {
-  --bs-gutter-x: 30px !important;
-}
 body .more {
   border: none;
   border-radius: 30px 30px 30px 30px;
@@ -626,6 +623,4 @@ PageBox styles
 .recipe-item .recipe-lead {
   color: #737373;
   margin-bottom: 40px;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

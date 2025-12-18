@@ -20,10 +20,10 @@
     echo $this->TsHtml->favicon();
 
     echo $this->Html->css([
-        'TSCms./lib/bootstrap/5_current/css/bootstrap.min.css',
+        'TSCms.lib/bootstrap/5_current/css/bootstrap.min.css',
     ]);
 
-    echo $this->Asset->css([
+    echo $this->Html->css([
         'style'
     ]);
 
@@ -69,25 +69,25 @@ echo $this->element('footer');
 echo $this->TsHtml->getFontawesome('5_13_0', ['solid-900', 'brands-400'], ['solid', 'brands']);
 
 echo $this->Html->css([
-    'TSCms./lib/fancybox/3_x/dist/jquery.fancybox.min.css',
+    'TSCms.lib/fancybox/3_x/dist/jquery.fancybox.min.css',
 ]);
 
 if($adminEdit) {
     $this->Html->script([
-        'TSCms./lib/bootstrap-notify/bootstrap-notify.min.js',
+        'TSCms.lib/bootstrap-notify/bootstrap-notify.min.js',
         'TSCms.frontadmin'
     ], ['block' => 'script']);
 }
 
 echo
 $this->Html->script([
-    'TSCms./lib/jquery/3/jquery.min.js',
-    'TSCms./lib/bootstrap/5_current/js/bootstrap.bundle.min.js',
-    'TSCms./lib/fancybox/3_x/dist/jquery.fancybox.min.js',
+    'TSCms.lib/jquery/3/jquery.min.js',
+    'TSCms.lib/bootstrap/5_current/js/bootstrap.bundle.min.js',
+    'TSCms.lib/fancybox/3_x/dist/jquery.fancybox.min.js',
 ]);
 
 echo
-$this->Asset->script([
+$this->Html->script([
     'TSCms.studio.js',
     'TSCms.scripts.js',
 ]);
