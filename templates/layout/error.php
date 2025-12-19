@@ -7,7 +7,6 @@
     echo $this->Html->charset();
     
     /** @var \App\View\AppView $this */
-    $this->TsHtml->setSettings($ts_settings);
 
     echo $this->TsHtml->noindex();
 
