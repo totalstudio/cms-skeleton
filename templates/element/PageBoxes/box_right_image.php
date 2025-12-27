@@ -5,7 +5,7 @@
                 <?php
                 if (!empty($widget->page_text->title)) {
                     echo $this->Html->tag('h2', (!empty($widget->page_text->url) ? $this->Html->link($widget->page_text->title, $widget->page_text->url, [
-                        'escape' => FALSE
+                        'escape' => false
                     ]) : $widget->page_text->title));
                 }
 
@@ -18,7 +18,7 @@
                             $widget->page_text->url,
                             [
                                 'class'  => 'more',
-                                'escape' => FALSE
+                                'escape' => false
                             ]
                         ), ['class' => 'btn-wrapper']);
                 }

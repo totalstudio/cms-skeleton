@@ -78,7 +78,7 @@ return [
         'old' => [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
-            'persistent' => FALSE,
+            'persistent' => false,
             'host' => env('DATABASE_HOST_OLD', '127.0.0.1'),
             'port' => env('DATABASE_PORT_OLD', 3306),
             'username' => env('DATABASE_USERNAME_OLD', 'root'),
@@ -87,10 +87,10 @@ return [
             'encoding' => 'utf8',
             'timezone' => 'UTC',
             'flags' => [],
-            'cacheMetadata' => TRUE,
-            'log' => TRUE,
-            'quoteIdentifiers' => FALSE,
-            'url' => env('DATABASE_URL', NULL),
+            'cacheMetadata' => true,
+            'log' => true,
+            'quoteIdentifiers' => false,
+            'url' => env('DATABASE_URL', null),
         ],
     ],
 

@@ -1,4 +1,4 @@
-<div class="box<?= (!empty($widget->page_text->picture) ? ' has-image' : NULL) ?> image_<?=$widget->custom_fields['image_position']??'center'?>">
+<div class="box<?= (!empty($widget->page_text->picture) ? ' has-image' : null) ?> image_<?=$widget->custom_fields['image_position']??'center'?>">
     <?php
     if(!empty($widget->page_text->picture)):
         echo $this->element('PageBoxes/_image', ['widget' => $widget]);
@@ -11,7 +11,7 @@
         }
 
         if(!empty($widget->page_text->title)) {
-            echo $this->Html->tag('h2', (!empty($widget->page_text->url) ? $this->Html->link($widget->page_text->title, $widget->page_text->url, ['escape' => FALSE]) : $widget->page_text->title));
+            echo $this->Html->tag('h2', (!empty($widget->page_text->url) ? $this->Html->link($widget->page_text->title, $widget->page_text->url, ['escape' => false]) : $widget->page_text->title));
         }
 
         echo $widget->page_text->content;
@@ -23,8 +23,8 @@
                     $widget->page_text->url,
                     [
                         'class'  => 'more',
-                        'escape' => FALSE,
-                        'target' => (substr_count($widget->page_text->url, 'http') > 0 ? '_blank' : FALSE),
+                        'escape' => false,
+                        'target' => (substr_count($widget->page_text->url, 'http') > 0 ? '_blank' : false),
                     ]
                 ), ['class' => 'btn-wrapper']);
         }

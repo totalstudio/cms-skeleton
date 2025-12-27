@@ -20,7 +20,7 @@ if ($adminEdit) {
         ]
     );
 
-    echo $this->TsForm->input('_locale', FALSE, ['type' => 'hidden', 'value' => $lng]);
+    echo $this->TsForm->input('_locale', false, ['type' => 'hidden', 'value' => $lng]);
 
     echo $this->TsForm->inlineWysiwyg(
         'save[' . $text->id . '][content]',

@@ -46,7 +46,7 @@ echo $this->Html->link(
     $data['url'],
     [
         'escape' => false,
-        'class' => (('/' . $this->getRequest()->getUri() == $data['url']) ? 'active' : NULL),
+        'class' => (('/' . $this->getRequest()->getUri() == $data['url']) ? 'active' : null),
         'target' => $target
     ]
 );

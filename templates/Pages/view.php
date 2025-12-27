@@ -30,25 +30,25 @@ $this->start('custom_metas');
                 'controller' => 'Pages',
                 'action' => 'view',
                 $entity->ident,
-            ], ['fullBase' => TRUE]);
+            ], ['fullBase' => true]);
         }catch(\Cake\Routing\Exception\MissingRouteException $e){
             $url = $this->Url->build([
                 'controller' => 'Pages',
                 'action' => 'view',
                 'slug' => $entity->slug,
-            ], ['fullBase' => TRUE]);
+            ], ['fullBase' => true]);
         }
     }else {
         $url = $this->Url->build([
             'controller' => 'Pages',
             'action' => 'view',
             'slug' => $entity->slug,
-        ], ['fullBase' => TRUE]);
+        ], ['fullBase' => true]);
     }
 echo '<link rel="canonical" href="' . $url . '">';
 
 if ($entity->seo_noindex) {
-    echo $this->TsHtml->noindex(TRUE);
+    echo $this->TsHtml->noindex(true);
 }
 
 $this->end();
@@ -77,10 +77,10 @@ if (!empty($adminEdit)) {
             $entity->id,
             'prefix'     => 'Admin'
         ],
-        'admin'     => TRUE,
+        'admin'     => true,
         'onlycheck' => 'false'
     ]);
-    echo $this->TsForm->input('_locale', FALSE, ['type' => 'hidden', 'value' => $lng]);
+    echo $this->TsForm->input('_locale', false, ['type' => 'hidden', 'value' => $lng]);
 
     $this->start('h1');
     echo $this->TsForm->inlineWysiwyg('title', $entity->title, ['tag' => 'h1'], ['toolbar1' => 'save undo redo', 'menubar' => false]);
@@ -91,7 +91,7 @@ if (!empty($adminEdit)) {
 
     if (!empty($entity) && $entity->has('page_widgets')) {
         $actualSection = 1;
-        $sections[$actualSection] = ['type' => 'container', 'style' => FALSE];
+        $sections[$actualSection] = ['type' => 'container', 'style' => false];
         foreach ($entity->page_widgets as $widgetNum => $widget) {
             echo $this->TsForm->input('page_widgets.' . $widgetNum . '.id', false, ['type' => 'hidden', 'class' => 'widgetId']);
 
@@ -126,14 +126,14 @@ if (!empty($adminEdit)) {
                 ?>
                 <div class="<?= $widget->width_class ?> <?= $widget->style ?>  <?= $widget->custom_style ?>">
                         <?php
-                        $cellData = explode('.', (!empty($widget->widget_type) ? $widget->widget_type : NULL));
+                        $cellData = explode('.', (!empty($widget->widget_type) ? $widget->widget_type : null));
                         if (empty($cellData[0]) && empty($cellData[1])) {
                             echo 'MISSING WIDGET DATA! ' . $cellData[0] . ' ' . $cellData[1];
                         } elseif (!empty($cellData[0]) && !empty($cellData[1]) && !empty($cellData[2])) {
                             try {
                                 echo $this->cell($cellData[0] . '.' . $cellData[1] . '::widget' . $cellData[2], [
                                     $this,
-                                    (!empty($widget->content_id) ? $widget->content_id : NULL),
+                                    (!empty($widget->content_id) ? $widget->content_id : null),
                                     $widget
                                 ]);
                             } catch (\Cake\View\Exception\MissingCellException $e) {
@@ -143,7 +143,7 @@ if (!empty($adminEdit)) {
                             try {
                                 echo $this->cell($cellData[0] . '::widget' . $cellData[1], [
                                     $this,
-                                    (!empty($widget->content_id) ? $widget->content_id : NULL),
+                                    (!empty($widget->content_id) ? $widget->content_id : null),
                                     $widget
                                 ]);
                             } catch (\Cake\View\Exception\MissingCellException $e) {
@@ -153,7 +153,7 @@ if (!empty($adminEdit)) {
                             try {
                                 echo $this->cell('Studio::widget' . $cellData[0], [
                                     $this,
-                                    (!empty($widget->content_id) ? $widget->content_id : NULL),
+                                    (!empty($widget->content_id) ? $widget->content_id : null),
                                     $widget
                                 ]);
                             } catch (\Cake\View\Exception\MissingCellException $e) {
@@ -182,7 +182,7 @@ if (!empty($adminEdit)) {
     $sections = [];
     if (!empty($entity) && $entity->has('page_widgets')) {
         $actualSection = 1;
-        $sections[$actualSection] = ['type' => 'container', 'style' => FALSE];
+        $sections[$actualSection] = ['type' => 'container', 'style' => false];
         foreach ($entity->page_widgets as $widgetNum => $widget) {
 
             if (($widget->widget_type == 'page_text' || $widget->widget_type == 'PageTexts') && !empty($widget->has('page_text'))) {
@@ -216,14 +216,14 @@ if (!empty($adminEdit)) {
                 <div class="<?= $widget->width_class ?> <?= $widget->style ?> <?= $widget->custom_style ?>">
 
                         <?php
-                        $cellData = explode('.', (!empty($widget->widget_type) ? $widget->widget_type : NULL));
+                        $cellData = explode('.', (!empty($widget->widget_type) ? $widget->widget_type : null));
                         if (empty($cellData[0]) && empty($cellData[1])) {
                             echo 'MISSING WIDGET DATA! ' . $cellData[0] . ' ' . $cellData[1];
                         } elseif (!empty($cellData[0]) && !empty($cellData[1]) && !empty($cellData[2])) {
                             try {
                                 echo $this->cell($cellData[0] . '.' . $cellData[1] . '::widget' . $cellData[2], [
                                     $this,
-                                    (!empty($widget->content_id) ? $widget->content_id : NULL),
+                                    (!empty($widget->content_id) ? $widget->content_id : null),
                                     $widget
                                 ]);
                             } catch (\Cake\View\Exception\MissingCellException $e) {
@@ -233,7 +233,7 @@ if (!empty($adminEdit)) {
                             try {
                                 echo $this->cell($cellData[0] . '::widget' . $cellData[1], [
                                     $this,
-                                    (!empty($widget->content_id) ? $widget->content_id : NULL),
+                                    (!empty($widget->content_id) ? $widget->content_id : null),
                                     $widget
                                 ]);
                             } catch (\Cake\View\Exception\MissingCellException $e) {
@@ -243,7 +243,7 @@ if (!empty($adminEdit)) {
                             try {
                                 echo $this->cell('Studio::widget' . $cellData[0], [
                                     $this,
-                                    (!empty($widget->content_id) ? $widget->content_id : NULL),
+                                    (!empty($widget->content_id) ? $widget->content_id : null),
                                     $widget
                                 ]);
                             } catch (\Cake\View\Exception\MissingCellException $e) {
@@ -304,14 +304,14 @@ foreach ($sections as $ident => $type) {
     try {
         echo $this->element('PageSections/' . $type['type'], [
             'content' => $this->fetch('section' . $ident),
-            'customStyle' => $type['style'] ?? NULL,
-            'id' => (!empty($type['id']) ? 'section' . $type['id'] : NULL)
+            'customStyle' => $type['style'] ?? null,
+            'id' => (!empty($type['id']) ? 'section' . $type['id'] : null)
         ]);
     } catch (\Cake\View\Exception\MissingElementException $e) {
         echo $this->element('PageSections/fluid_to_container', [
             'content' => $this->fetch('section' . $ident),
-            'customStyle' => $type['type'].' '.$type['style'] ?? NULL,
-            'id' => (!empty($type['id']) ? 'section' . $type['id'] : NULL)
+            'customStyle' => $type['type'].' '.$type['style'] ?? null,
+            'id' => (!empty($type['id']) ? 'section' . $type['id'] : null)
         ]);
     }
 }

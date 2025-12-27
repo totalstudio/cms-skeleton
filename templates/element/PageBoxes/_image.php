@@ -41,7 +41,7 @@ if(!empty($mainImage)):
             echo $this->Html->tag('div', $mainImage, ['class' => 'image-holder']);
         } else {
             echo $this->Html->link($mainImage, $widget->page_text->url, [
-                'escape' => FALSE,
+                'escape' => false,
                 'class'  => 'image-holder',
                 'target' => (substr_count( $widget->page_text->url,'http')>0?'_blank':false)
             ]);

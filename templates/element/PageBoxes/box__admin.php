@@ -25,7 +25,7 @@
             if(!empty($widget->page_text->url)) {
                 echo $this->Html->link($this->Html->tag('span', '', ['class' => 'fas fa-link']), $widget->page_text->url, [
                     'class' => 'follow-link position-absolute',
-                    'escape' => FALSE
+                    'escape' => false
                 ]);
             }
         }
@@ -39,7 +39,7 @@
                     $widget->page_text->url,
                     [
                         'class'  => 'more',
-                        'escape' => FALSE
+                        'escape' => false
                     ]
                 ), ['class' => 'btn-wrapper']);
         }
