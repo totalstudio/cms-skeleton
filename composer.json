@@ -11,7 +11,7 @@
         "total-studio/install": "dev-main"
     },
     "require-dev": {
-        "cakephp/bake": "3.0.1",
+        "cakephp/bake": "^3.8.1",
         "cakephp/cakephp-codesniffer": "5.1.1",
         "josegonzalez/dotenv": "4.0.0",
         "cakephp/debug_kit": "^5.2.4",
