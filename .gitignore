@@ -5,6 +5,8 @@
 /logs/*
 /tmp/*
 /vendor/*
+# CMS user uploads (they belong to the site's content, not to the code)
+/webroot/uploads/
 
 # OS generated files #
 ######################
