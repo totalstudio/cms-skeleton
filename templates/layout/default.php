@@ -25,7 +25,9 @@
     echo $this->Html->css([
         'style',
     ]);
-    if ($adminEdit) {
+    // The front admin bar for every signed-in admin ($frontAdmin, TSCms), also where front editing is off
+    // (content pages: PagesController::view sets $adminEdit to false).
+    if ($adminEdit || !empty($frontAdmin)) {
         $this->start('adminbar');
         echo $this->element('TSCms.adminbar');
         $this->end();
