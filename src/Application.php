@@ -16,10 +16,12 @@ declare(strict_types=1);
  */
 namespace App;
 
+use App\Event\AdminMenuListener;
 use Cake\Core\Configure;
 use Cake\Core\ContainerInterface;
 use Cake\Datasource\FactoryLocator;
 use Cake\Error\Middleware\ErrorHandlerMiddleware;
+use Cake\Event\EventManager;
 use Cake\Http\BaseApplication;
 use Cake\Http\MiddlewareQueue;
 use Cake\ORM\Locator\TableLocator;
@@ -63,6 +65,8 @@ class Application extends BaseApplication
         // Load Studio CMS
         $this->addPlugin(\TSCms\Plugin::class);
 
+        // Admin menu items of the project
+        EventManager::instance()->on(new AdminMenuListener());
     }
 
     /**
